@@ -16,11 +16,27 @@ print('I"m tired. I go sleep sleep now'
 
       
       
-      while True:
+ if myAge < 13:
+  print("Learning young, that's good")
+
+elif myAge == 13:
+  print("You're a teenager now... that's cool, I guess")
+
+elif myAge > 13 and myAge < 30:
+  print("Still young, still learning…")
+
+elif myAge >= 30 and myAge < 65:
+  print("Now you're adulting.")
+
+else:
+  print("... you've lived a long time?")     
+      
+      
+ while True:
   print('Please type your name.')
   name = input()
 
-  if name == 'your name':
+  if name == 'Kiro':
     break
 
 print('Thank You')
