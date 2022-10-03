@@ -13,3 +13,14 @@ print('i wish i was %s years old' %(myAge *2))
 
 time.sleep(3)
 print('I"m tired. I go sleep sleep now'
+
+      
+      
+      while True:
+  print('Please type your name.')
+  name = input()
+
+  if name == 'your name':
+    break
+
+print('Thank You')
