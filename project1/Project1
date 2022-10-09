@@ -1,0 +1,76 @@
+#Unit conversion for selected number of units 
+# the purpose of this script is to help users convert units easily and accurately 
+
+from secrets import choice
+
+
+print('*** Hello and welcome to unit converter ***')
+
+print(' ')
+
+def print_menu():
+    print('1, Kilometers to Miles')
+    print('2, Miles to kilometers')
+    print('3, Kilograms to Pounds')
+    print('4, Pounds to Kilometers')
+    print('5, Celsius  to Fahrenheit')
+    print('6, Fahrenheit to Celsius')
+
+def km_miles():
+    km = float(input('Enetr a distance in kilometers: '))
+    miles = km / 1.609
+    print('Distance in miles:{0}'.format(miles))
+
+def miles_km():
+    miles = float(input('Enetr a distance in miles: '))
+    km = miles * 1.609
+    print('Distance in kilometers:{0}'.format(km))
+
+def kg_pounds():
+    kg = float(input('Enetr a weight in kilograms: '))
+    Pounds = kg / 2.205
+    print('Weight in pounds:{0}'.format(Pounds))
+
+def pounds_kg():
+    Pounds = float(input('Enetr a weight in pounds: '))
+    Pounds = Pounds * 2.205
+    print('Weight in pounds:{0}'.format(Pounds))
+
+def C_F():
+    celsius = float(input('Enetr the temperature in celsius: '))
+    fahrenheit = (celsius  * (9/5)) + 32
+    print('temperature in fahrenheit is:{0}'.format(fahrenheit))
+ 
+
+def F_C():
+    fahrenheit = float(input('Enetr the temperature in fahrenheit: '))
+    celsius = (fahrenheit -32) * (5/9)
+    print('temperature in celsius is:{0}'.format(celsius))
+print_menu()
+
+
+print(' ')
+
+choice = input ('Hello, please select from the conversion units avalaibe from 1 - 6 (e.g select 1  to convert kilometer to miles)')
+
+if choice == '1':
+    km_miles()
+if choice == '2':
+    miles_km()
+if choice == '3':
+    kg_pounds()
+if choice == '4':
+    pounds_kg()
+if choice == '5':
+    C_F()
+if choice == '6':
+    F_C()
+
+
+else:
+     print('Please seclect from 1 to 6 with indentation')
+
+#citation
+#        : Fabio Musanni https://www.youtube.com/watch?v=jtM9RLAENVE
+#        : Unit converter google library
+#        : https://swcarpentry.github.io/python-novice-inflammation/07-cond/index.html
