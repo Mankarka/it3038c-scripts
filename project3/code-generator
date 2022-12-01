@@ -1,1 +1,47 @@
+#Random password generator project 
+import random
+import array
+ 
+# maximum length of password 20 characters
+Max_lenth = 20
+ 
+# declare arrays of the character that we need in our password
+Lowercase_characters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j','k', 'm','n',
+                        'o', 'p', 'q','r', 's', 't', 'u', 'v', 'w', 'x', 'y','z']
+ 
+Uppercase_character = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I', 'J', 'K', 'M', 'N', 
+                       'O', 'P', 'Q','R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y','Z']
+ 
+Special_symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-','=', '+',
+                   '{', '[', '}', '}', ':', ';', '"', ',', '<', '.', '>', '/', '?']
 
+Integer = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'] 
+ 
+# combines all the character arrays to form one array 
+Combined_list =  Lowercase_characters + Uppercase_character + Special_symbols + Integer
+ 
+# randomly select at least one character from each character set 
+rand_upper = random.choice(Lowercase_characters)
+rand_lower = random.choice(Uppercase_character)
+rand_symbol = random.choice(Special_symbols)
+rand_digit = random.choice(Integer)
+
+new_pass =  rand_upper + rand_lower + rand_symbol + rand_digit 
+ 
+# now that we are sure we have at least one character from each
+# we will deduct 4 from max lenth since they were already generated 
+for x in range(Max_lenth - 4):
+    new_pass = new_pass + random.choice(Combined_list)
+ 
+    # convert temporary password into array and shuffle to
+    # prevent it from having a consistent pattern
+    new_pass_list = array.array('u', new_pass)
+    random.shuffle(new_pass_list)
+ 
+# to form the password
+password = " "
+for x in new_pass_list:
+        password = password + x
+         
+# print out password
+print("Your unique password is: " + (password))
