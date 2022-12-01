@@ -17,7 +17,7 @@ Citation: -
 * Vishal (2022) Python range() explained with examples, PYnative. Available at: https://pynative.com/python-range-function/ (Accessed: November 23, 2022).
 
 * Vishal (2021) Python random choice() function to select a random item from a list and set, PYnative. Available at: https://pynative.com/python-random-choice/ (Accessed: November 27, 2022). 
-* 
+
 * Array - efficient arrays of numeric values¶ (no date) array - Efficient arrays of numeric values - Python 3.11.0 documentation. Available at: https://docs.python.org/3/library/array.html (Accessed: November 27, 2022). 
 
 * Vishal (2021) Python random.shuffle() function to shuffle list, PYnative. Available at: https://pynative.com/python-random-shuffle/ (Accessed: November 28, 2022).
